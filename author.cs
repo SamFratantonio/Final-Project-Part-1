@@ -9,7 +9,8 @@ class Author : Person
   public Author(string fname, string lname, string ssn) : base(fname, lname, ssn) {
 
   }
-  public Author(string fname, string lname, string ssn, string addr1, string addr2, string cityname, string statename, string zipcode) : base(fname, lname, ssn, addr1, addr2, cityname, statename, zipcode) {
+  public Author(string fname, string lname, string ssn, string addr1, string addr2, string cityname, string statename, string zipcode) 
+  : base(fname, lname, ssn, addr1, addr2, cityname, statename, zipcode) {
 
   }
 
