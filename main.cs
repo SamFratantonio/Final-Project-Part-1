@@ -34,9 +34,40 @@ class MainClass {
     Patron p3 = new Patron("James", "Parker", "13");
     Patron p4 = new Patron("Bob", "McDonald", "14");
     Patron p5 = new Patron("Janie", "Wright", "15");
-    p1.AddToRentalCart(b1, DateTime.Today);
+    //p1.AddToRentalCart(b1, DateTime.Today);
     p1.AddToRentalCart(b3, DateTime.Today);
     p1.RemoveFromRentalCart(b3);
     p1.Display();
+
+    /*
+    Part 3
+    */
+    Console.WriteLine("PART 3");
+    LibraryCollection lc = new LibraryCollection();
+    lc.AddPatron(p1);
+    lc.AddPatron(p2);
+    lc.AddPatron(p3);
+    lc.AddPatron(p4);
+    lc.AddPatron(p5);
+    lc.DisplayPatronInfo();
+    lc.RemovePatron(p5);
+    lc.DisplayPatronInfo();
+    lc.AddToCollection(b1);
+    lc.AddToCollection(b2);
+    lc.AddToCollection(b3);
+    lc.AddToCollection(b4);
+    lc.AddToCollection(b5);
+    lc.AddToCollection(b6);
+    lc.DisplayCollection();
+    lc.RemoveFromCollection(b5);
+    lc.DisplayCollection();
+    p1.AddToRentalCart(b1, DateTime.Today); //wasn't specified so I'm using DateTime.Today
+    p1.AddToRentalCart(b2, DateTime.Today);
+    p1.AddToRentalCart(b3, DateTime.Today);
+    p1.RemoveFromRentalCart(b3);
+    lc.ProcessRental(p1);
+    lc.DisplayCollection();
+    lc.ProcessReturns(p1, b2);
+    lc.DisplayCollection();
   }
 }
