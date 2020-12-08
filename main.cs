@@ -25,5 +25,18 @@ class MainClass {
     johnDoe.DisplayBooks();
     bobJones.RemoveBook("1");
     bobJones.DisplayBooks();
+
+    /*
+    Part 2
+    */
+    Patron p1 = new Patron("Alex", "McDonald", "11");
+    Patron p2 = new Patron("Robert", "Carpenter", "12");
+    Patron p3 = new Patron("James", "Parker", "13");
+    Patron p4 = new Patron("Bob", "McDonald", "14");
+    Patron p5 = new Patron("Janie", "Wright", "15");
+    p1.AddToRentalCart(b1, DateTime.Today);
+    p1.AddToRentalCart(b3, DateTime.Today);
+    p1.RemoveFromRentalCart(b3);
+    p1.Display();
   }
 }
